@@ -1,0 +1,17 @@
+{
+  "name": "beer-ecommerce-backend",
+  "version": "1.0.0",
+  "description": "Backend API for beer e-commerce",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "dev": "nodemon --exec \"node --env-file=.env server.js\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
