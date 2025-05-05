@@ -9,8 +9,6 @@ function ProductCard({ product, onAddToCart }) {
     return `$${(cents / 100).toFixed(2)}`
   }
 
-  const rating = (Math.random() * (5.0 - 3.5) + 3.5).toFixed(1);
-
   return (
     <div className="relative">
       <Link to={`/product/${product.id}-${product.brand.toLowerCase().replace(/\s+/g, "-")}`}>
@@ -22,7 +20,7 @@ function ProductCard({ product, onAddToCart }) {
 
           <div className="flex items-center space-x-1 mb-1">
             <StarIcon className="w-4 h-4 text-yellow-400" />
-            <span className="text-sm text-gray-600">{rating}</span>
+            <span className="text-sm text-gray-600">{product.rating}</span>
           </div>
 
           <p className="text-xl font-bold">{formatPrice(product.price)}</p>
